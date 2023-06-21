@@ -1,0 +1,90 @@
+.seguro-bg{
+    background-color: var(--cor-11);
+    
+}
+
+.seguro{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding-top: 60px;
+    padding-bottom: 60px;
+    align-items: center;
+    gap: 40px;
+}
+.seguro > h1{
+    color: var(--cor-0);
+    padding-top: 20px;
+}
+
+.titulo{
+    grid-column: 1/-1;
+    padding-top: 0px;
+}
+.seguro > h1,p,span{
+    grid-column: 1/-1;
+}
+.seguro-card{
+    background-color: var(--cor-12);
+    margin-top: 15px;
+    border-radius: 4px;
+    padding: 32px 32px 32px 60px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    
+}
+.seguro-card span{
+    display: block;
+    grid-column: 2;
+    text-align: right;
+}
+.preco{
+    position: relative;
+    color: var(--cor-0);
+}
+.mensal{
+    position: absolute;
+    top: 40px;
+    right: 4px;
+    color: var(--cor-6);
+}
+.seguro-card a{
+    grid-column: 1/-1;
+}
+.seguro-card h2{
+    
+    margin-bottom: 40px;
+    color: var(--cor-6);
+}
+.seguro-card h6{
+    color: var(--cor-p1);
+    margin-bottom: 40px;
+    
+}
+.seguro-card ul{
+    display: grid;
+    gap: 20px;
+    margin-bottom: 32px;
+    grid-column: 1/-1;
+}
+.seguro-card ul li{
+    color: var(--cor-0);
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.seguro-card ul li::before {
+    content: " ";
+    display: inline-block;
+    width: 13px;
+    height: 9px;
+    background: url(../../img/icones/lista.svg);
+    position: absolute;
+    left: -22px;
+}
+
+
+@media (max-width: 800px){
+    .seguro{
+        grid-template-columns: repeat(1,1fr);
+    }
+}

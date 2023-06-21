@@ -1,0 +1,45 @@
+.seguro-bicicleta-bg{
+    background-color: var(--cor-11);
+    box-shadow: inset 0 120px var(--cor-0), inset 0 -120px var(--cor-12);
+}
+.seguro-bicicleta-conteudo{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    
+    gap: 40px;
+}
+.seguro-conteudo{
+    padding-top: 180px;
+    padding-bottom: 180px;
+}
+.seguro-conteudo h4{
+    margin-bottom: 32px;
+}
+.seguro-conteudo p{
+    margin-bottom: 20px;
+    color: var(--cor-5);
+}
+.seguro-imagem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    border-radius: 4px;
+}
+.ficha-informaoes{
+    letter-spacing: 0.015em;
+}
+@media (max-width: 600px) {
+    .seguro-bicicleta-bg{
+        box-shadow: inset 0px -60px var(--cor-12);
+    }
+    .seguro-bicicleta-conteudo{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .seguro-conteudo{
+        grid-row: 1;
+        padding-top: 60px;
+        padding-bottom: 0;
+    }
+    
+}

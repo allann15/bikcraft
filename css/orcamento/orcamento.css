@@ -1,0 +1,176 @@
+#orcamentos{
+    background: linear-gradient(var(--cor-11) 600px, var(--cor-1) 0px);
+}
+.orcamento{
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    padding-bottom: 120px;
+}
+.orcamento h2 {
+    text-transform: uppercase;
+    color: var(--cor-5);
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.orcamento h2::before{
+    content: " ";
+    width: 4px;
+    height: 8px;
+    background-color: var(--cor-p1);
+    position: absolute;
+    left: -12px;
+}
+.orcamento-produto,
+.orcamento-dados{
+    padding: 60px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.orcamento-produto{
+    background: var(--cor-12) url('../../img/dec/bottom-left.svg') no-repeat bottom 15px left 20px;
+    display: grid;
+    border-radius: 5px 0 0 5px;
+    grid-template-columns: 1fr 1fr;
+    align-content: flex-start;
+    gap: 20px;
+}
+.orcamento-produto > *{
+    grid-column: 1/-1;
+}
+.orcamento-produto > label {
+    grid-column: initial;
+}
+.orcamento-produto input:checked + label{
+    background-color: var(--cor-0);
+    color: var(--cor-11);
+}
+.orcamento-produto input:checked + label > span{
+    display: inline-block;
+    color: var(--cor-11);
+}
+.orcamento-produto label{
+    font: 400 1rem/1.5 "Poppins", sans-serif;
+    background-color: var(--cor-10);
+    color: var(--cor-4);
+    padding: 12px 16px;
+    border-radius: 4px;
+    display: block;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    border: 1px solid var(--cor-10);
+}
+.orcamento-conteudo label span{
+    display: none;
+    grid-column: 3;
+}
+.orcamento-produto label::before {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    box-sizing: border-box;
+    width: 12px;
+    height: 12px;
+    border: 1px solid var(--cor-6);
+    margin-right: 10px;
+}
+.orcamento-produto input:checked + label::before{
+    border-color: var(--cor-7);
+    box-shadow: inset 0px 0px 0px 3px var(--cor-0), inset 0 0 0 6px var(--cor-7);
+}
+.orcamento-produto label:hover{
+    background-color: var(--cor-9);
+    border-color: var(--cor-12);
+}
+.orcamento-produto input:focus + label{
+    box-shadow: 0 0 0 2px var(--cor-p1);
+    border-color: var(--cor-12);
+}
+.orcamento-produto input{
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+}
+.orcamento-dados{
+    background: var(--cor-0) url('../../img/dec/bottom-right.svg') no-repeat bottom 15px right 20px;
+    border-radius: 0 5px 5px 0;
+}
+.orcamento-conteudo{
+    padding: 20px;
+    
+    margin: 20px 0;
+    display: none;
+    margin-top: 20px;
+}
+#bikcraft:checked ~ #orcamento-bikcraft,
+#seguro:checked ~ #orcamento-seguro{
+    display: grid;
+    gap: 30px;
+}
+.orcamento-dados h2 {
+    margin-bottom: 13px;
+}
+.orcamento-dados label{
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 8px;
+}
+
+.orcamento-detalhes{
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 4px;
+    background-color: var(--cor-0);
+    padding: 20px;
+    align-items: center;
+    
+}
+.orcamento-detalhes ul li{
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    color: var(--cor-8);
+    flex-wrap: nowrap;
+}
+.orcamento-detalhes ul li img{
+    width: 16px;
+    margin-right: 10px;
+    
+}
+.orcamento-produto input:checked + label + .orcamento-detalhes{
+    display: grid;
+}
+
+@media (max-width: 1200px){
+    .orcamento-produto,
+    .orcamento-dados{
+        padding: 32px;
+    }
+}
+@media (max-width: 1000px){
+    .orcamento-detalhes{
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 800px){
+    .orcamento{
+        grid-template-columns: 1fr;
+    }
+    .orcamento-detalhes{
+        grid-template-columns: 1fr 1fr;
+    }
+    .orcamento-dados{
+        border-radius: 0 0 5px 5px;
+    }
+    .orcamento-produto{
+        border-radius: 5px 5px 0 0;
+        background: var(--cor-12)
+    }
+}
+
+@media (max-width: 400px){
+    .orcamento-produto{
+        grid-template-columns: 1fr;
+    }
+}

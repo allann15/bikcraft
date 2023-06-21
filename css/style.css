@@ -1,0 +1,57 @@
+@import "./global/header.css";
+@import "./global/global.css";
+@import "./global/footer.css";
+/* Home */
+@import "./home/introducao.css";
+@import "./bicicletas/introducao_bicicletas.css";
+@import "./tecnologia/tecnologia.css";
+@import "./home/parceiros.css";
+@import "./home/depoimentos.css";
+@import "./seguros/seguros.css";
+/*Utilidades */
+@import "./utilidades/componentes.css";
+@import "./utilidades/tipografia.css";
+@import "./utilidades/formulario.css";
+/* Seguros */
+@import "./seguros/seguros-pagina.css";
+@import "./seguros/perguntas.css";
+@import "./seguros/vantagens.css";
+/* Termos */
+@import "./termos/termos.css";
+/* Bicicletas */
+@import "./bicicletas/pagina-bicicleta.css";
+@import "./bicicletas/bicicletas.css";
+@import "./bicicletas/outras_bicicletas.css";
+@import "./bicicletas/bicicletas_seguro.css";
+/* Contatos */
+@import "./contatos/contatos.css";
+@import "./contatos/loja_contato.css";
+/* Orçamento */
+@import "./orcamento/orcamento.css";
+:root{
+    --cor-0: #fff;
+    --cor-1: #eee;
+    --texto-botao-pequeno: 1rem;
+    --cor-5: #b2b2b2;
+    --cor-p1: #ffbb00;
+    --cor-12: #000;
+    --cor-11: #111;
+    --cor-10: #2e2e2e;
+    --cor-2: #f7f7f7;
+    --cor-3: #dedede;
+    --cor-4: #cccccc;
+    --cor-6: #9c9c9c;
+    --cor-7: #717171;
+    --cor-8: #595959;
+    --cor-9: #404040;
+    --cor-p2: #e4a30b;
+    --cor-p3: #a66f00;
+    --cor-p4: #664400;
+    --cor-p5: #332200;
+   
+   --padding: 120px;
+   --padding-responsivo: 60px;
+}
+
+
+

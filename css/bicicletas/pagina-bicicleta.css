@@ -1,0 +1,127 @@
+.bicicleta{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding-top: 60px;
+    gap: 40px;
+    padding-bottom: 60px;
+    background: url('../../img/dec/top-right.svg')
+    no-repeat
+    top 40px right 20px;
+}
+.magic-bg:nth-child(3){
+    background: linear-gradient(to right, var(--cor-0) 30%, var(--cor-11) 0%);
+    
+    
+}
+
+.imagem-bicicleta{
+    position: relative;
+}
+.imagem-bicicleta img{
+    width: 100%;
+    border-radius: 4px;
+}
+.imagem-bicicleta span{
+    position: absolute;
+    background: var(--cor-12);
+    display: inline-block;
+    top: 20px;
+    right: 0;
+    padding: 8px 16px 8px 8px;
+    border-radius: 4px 0 0 4px;
+    color: var(--cor-0);
+}
+.bicicleta-conteudo, .bicicleta-conteudo-magic{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-content: start;
+}
+.bicicleta-conteudo-magic h1{
+    color: var(--cor-0);
+}
+
+.bicicleta h1,
+.bicicleta p,
+.bicicleta-conteudo-magic h1,
+.bicicleta-conteudo-magic p{
+    grid-column: 1/-1;
+}
+.bicicleta-conteudo a,
+.bicicleta-conteudo-magic a{
+    place-self: end;
+}
+.bicicleta h1{
+    
+    margin-bottom: 20px;
+    
+}
+.bicicleta h1::before{
+    content: " ";
+    display: block;
+    width: 13px;
+    height: 8px;
+    background: var(--cor-p1);
+    
+    margin-bottom: 8px;
+}
+.bicicleta-conteudo p{
+    margin-bottom: 20px;
+    color: var(--cor-8);
+    
+}
+.bicicleta-conteudo-magic p {
+    margin-bottom: 20px;
+    color: var(--cor-6);
+}
+.bicicleta-conteudo ul, .bicicleta-conteudo-magic ul{
+    display: grid;
+    gap: 20px;
+}
+.bicicleta-conteudo li{
+    display: flex;
+    align-items: center;
+    
+    color: var(--cor-8);
+}
+.bicicleta-conteudo-magic li {
+    display: flex;
+    align-items: center;
+    
+    color: var(--cor-6);
+}
+.bicicleta-conteudo li img, .bicicleta-conteudo-magic li img{
+    max-width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+@media (max-width: 900px){
+    .magic-bg:nth-child(3){
+        background:  var(--cor-11);
+        
+        
+    }
+    .bicicleta{
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    
+    
+    
+    
+}
+@media (max-width: 600px){
+    .bicicleta-conteudo, .bicicleta-conteudo-magic{
+        grid-template-columns: 1fr;
+    }
+    .bicicleta-conteudo ul, .bicicleta-conteudo-magic ul {
+        font-size: 1rem;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 30px;
+    }
+    .bicicleta-conteudo a, .bicicleta-conteudo-magic a{
+        place-self: start;
+    }
+}

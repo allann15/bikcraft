@@ -1,0 +1,73 @@
+.depoimentos {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background: var(--cor-p1) url('../../img/dec/bottom-right.svg')
+    no-repeat
+    bottom 40px right 40px;
+    overflow: hidden;
+}
+.depoimentos-imagem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0px;
+    
+    
+}
+.depoimentos-texto {
+    padding: 40px 40px 80px 80px;
+    display: flex;
+    align-self: end;
+    flex-direction: column;
+    overflow: hidden;
+    
+    
+    
+}
+.depoimentos-texto p {
+    font-family: "Merriweather", serif;
+    font-style: italic;
+    font-weight: 900;
+    margin-bottom: 32px;
+    max-width: 32ch;
+    position: relative;
+    color: var(--cor-95);
+}
+.depoimentos-texto span{
+    color: var(--cor-p5);
+}
+.depoimentos-texto p::before,
+.depoimentos-texto p::after{
+    
+    font-size: 5rem;
+    color: var(--cor-p2);
+    position: absolute;
+}
+.depoimentos-texto p::before{
+    
+    content: '“';
+    left: -50px;
+    top: -20px;
+}
+.depoimentos-texto p::after {
+    content: '”';
+}
+@media (min-width: 1200px){
+    .depoimentos-imagem img{
+        max-height: 520px;
+    }
+}
+@media (max-width: 800px){
+    .depoimentos{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .depoimentos-imagem img{
+        max-height: 200px;
+    }
+    .depoimentos-texto{
+        padding: 40px 20px;
+        justify-self: center;
+    }
+    
+}
